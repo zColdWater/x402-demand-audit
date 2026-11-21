@@ -1,0 +1,676 @@
+{
+ "items": [
+  {
+   "resource": "https://exec-a.example/api/send-native",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "50000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000a1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 13266,
+    "l30DaysUniquePayers": 4505,
+    "lastCalledAt": "2026-11-20T18:12:38Z"
+   },
+   "serviceName": "Exec A",
+   "description": "",
+   "tags": [
+    "payments"
+   ]
+  },
+  {
+   "resource": "https://exec-a.example/api/send-token",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "50000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000a1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 13355,
+    "l30DaysUniquePayers": 4619,
+    "lastCalledAt": "2026-11-20T18:12:49Z"
+   },
+   "serviceName": "Exec A",
+   "description": "",
+   "tags": [
+    "payments"
+   ]
+  },
+  {
+   "resource": "https://grade-b.example/api/verdict",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "20000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000b1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 88497,
+    "l30DaysUniquePayers": 621,
+    "lastCalledAt": "2026-11-20T18:31:40Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "crypto",
+    "ai"
+   ]
+  },
+  {
+   "resource": "https://weather-c.example/weather/current",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "2000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000c1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 1121,
+    "l30DaysUniquePayers": 367,
+    "lastCalledAt": "2026-11-20T12:56:04Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "weather"
+   ]
+  },
+  {
+   "resource": "https://trivial-d.example/x402/quote",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "5000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000d1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 43947,
+    "l30DaysUniquePayers": 127,
+    "lastCalledAt": "2026-11-20T18:20:40Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "utility"
+   ]
+  },
+  {
+   "resource": "https://trivial-d.example/x402/ping",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "5000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000d1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 44309,
+    "l30DaysUniquePayers": 141,
+    "lastCalledAt": "2026-11-20T18:20:40Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "utility"
+   ]
+  },
+  {
+   "resource": "https://trivial-d.example/x402/network",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "5000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000d1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 43839,
+    "l30DaysUniquePayers": 139,
+    "lastCalledAt": "2026-11-20T18:20:40Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "utility"
+   ]
+  },
+  {
+   "resource": "https://trivial-d.example/x402/time",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "5000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000d1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 43892,
+    "l30DaysUniquePayers": 137,
+    "lastCalledAt": "2026-11-20T18:20:40Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "utility"
+   ]
+  },
+  {
+   "resource": "https://trivial-d.example/x402/uuid",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "5000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000d1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 43876,
+    "l30DaysUniquePayers": 128,
+    "lastCalledAt": "2026-11-20T18:20:40Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "utility"
+   ]
+  },
+  {
+   "resource": "https://trivial-d.example/x402/payment",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "5000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000d1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 43992,
+    "l30DaysUniquePayers": 125,
+    "lastCalledAt": "2026-11-20T18:20:40Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "utility"
+   ]
+  },
+  {
+   "resource": "https://trivial-d.example/x402/random",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "5000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000d1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 43845,
+    "l30DaysUniquePayers": 123,
+    "lastCalledAt": "2026-11-20T18:20:40Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "utility"
+   ]
+  },
+  {
+   "resource": "https://trivial-d.example/x402/ip",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "5000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000d1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 43833,
+    "l30DaysUniquePayers": 123,
+    "lastCalledAt": "2026-11-20T18:20:40Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "utility"
+   ]
+  },
+  {
+   "resource": "https://trivial-d.example/x402/status",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "5000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000d1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 43898,
+    "l30DaysUniquePayers": 120,
+    "lastCalledAt": "2026-11-20T18:20:40Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "utility"
+   ]
+  },
+  {
+   "resource": "https://trivial-d.example/x402/rewrite",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "10000000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000d1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 250,
+    "l30DaysUniquePayers": 95,
+    "lastCalledAt": "2026-11-20T18:16:58Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "ai"
+   ]
+  },
+  {
+   "resource": "https://search-e.example/search",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "7000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000e1",
+     "maxTimeoutSeconds": 60
+    },
+    {
+     "scheme": "exact",
+     "network": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+     "amount": "7000",
+     "asset": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+     "payTo": "So1anaPayTo1111111111111111111111111111111"
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 13329,
+    "l30DaysUniquePayers": 149,
+    "lastCalledAt": "2026-11-20T18:21:21Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "search"
+   ]
+  },
+  {
+   "resource": "https://llm-f.example/v1/chat/completions",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "2000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000f1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 75992,
+    "l30DaysUniquePayers": 284,
+    "lastCalledAt": "2026-11-20T18:25:35Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "ai",
+    "llm"
+   ]
+  },
+  {
+   "resource": "https://chain-g.example/api/erc20-balance",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "3000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x0000000000000000000000000000000000000061",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 743,
+    "l30DaysUniquePayers": 730,
+    "lastCalledAt": "2026-11-19T21:02:40Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "blockchain",
+    "data"
+   ]
+  },
+  {
+   "resource": "https://chain-g.example/api/block-number",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "1000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x0000000000000000000000000000000000000061",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 735,
+    "l30DaysUniquePayers": 646,
+    "lastCalledAt": "2026-11-20T16:03:59Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "blockchain",
+    "data"
+   ]
+  },
+  {
+   "resource": "https://chain-g.example/api/contract/:address",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "5000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x0000000000000000000000000000000000000061",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 530,
+    "l30DaysUniquePayers": 530,
+    "lastCalledAt": "2026-11-13T04:00:34Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "blockchain",
+    "data"
+   ]
+  },
+  {
+   "resource": "https://social-h.example/api/v1/twitter/search",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "5000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x0000000000000000000000000000000000000071",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 11960,
+    "l30DaysUniquePayers": 28,
+    "lastCalledAt": "2026-11-20T18:00:03Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "social"
+   ]
+  },
+  {
+   "resource": "https://lonely-i.example/one",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "1000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x0000000000000000000000000000000000000081",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 3,
+    "l30DaysUniquePayers": 1,
+    "lastCalledAt": "2026-11-10T00:00:00Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": []
+  },
+  {
+   "resource": "https://v1-j.example/data",
+   "type": "http",
+   "x402Version": 1,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "base",
+     "maxAmountRequired": "10000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x0000000000000000000000000000000000000091",
+     "description": "v1 description"
+    }
+   ],
+   "lastUpdated": "2026-11-19T00:00:00Z"
+  },
+  {
+   "resource": "https://testnet-k.example/t",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:84532",
+     "amount": "1000",
+     "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+     "payTo": "0x0000000000000000000000000000000000000092"
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 50,
+    "l30DaysUniquePayers": 5,
+    "lastCalledAt": "2026-11-20T00:00:00Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": []
+  },
+  {
+   "resource": "https://odd-l.example/x",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "5",
+     "asset": "0x000000000000000000000000000000000000dead",
+     "payTo": "0x0000000000000000000000000000000000000093"
+    }
+   ],
+   "quality": {
+    "l30DaysTotalCalls": 12,
+    "l30DaysUniquePayers": 4,
+    "lastCalledAt": "2026-11-20T00:00:00Z"
+   }
+  },
+  {
+   "resource": "https://xss-m.example/<script>alert(1)</script>",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "1000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x0000000000000000000000000000000000000094",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T20:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 20,
+    "l30DaysUniquePayers": 12,
+    "lastCalledAt": "2026-11-20T00:00:00Z"
+   },
+   "serviceName": "<img src=x onerror=alert(2)>",
+   "description": "\"><script>alert(3)</script> =cmd|calc",
+   "tags": [
+    "<b>tag</b>"
+   ]
+  },
+  {
+   "resource": "https://weather-c.example/weather/current",
+   "type": "http",
+   "x402Version": 2,
+   "accepts": [
+    {
+     "scheme": "exact",
+     "network": "eip155:8453",
+     "amount": "2000",
+     "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+     "payTo": "0x00000000000000000000000000000000000000c1",
+     "maxTimeoutSeconds": 60
+    }
+   ],
+   "lastUpdated": "2026-11-20T21:00:00.000Z",
+   "quality": {
+    "l30DaysTotalCalls": 1130,
+    "l30DaysUniquePayers": 367,
+    "lastCalledAt": "2026-11-20T12:56:04Z"
+   },
+   "serviceName": "",
+   "description": "",
+   "tags": [
+    "weather"
+   ]
+  }
+ ],
+ "pagination": {
+  "limit": 100,
+  "offset": 0,
+  "total": 25
+ },
+ "x402Version": 2
+}

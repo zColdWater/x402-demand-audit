@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>x402 Demand Audit</title>
+<meta name="description" content="Which x402 paid APIs have real, distinct paying agents, and which have volume from a handful of wallets? A daily open-data audit of the Coinbase CDP x402 Bazaar: unique payers vs. calls, concentration flags, price vs. reach.">
+<meta property="og:title" content="x402 Demand Audit">
+<meta property="og:description" content="Which x402 paid APIs have real, distinct paying agents, and which have volume from a handful of wallets? A daily open-data audit of the Coinbase CDP x402 Bazaar: unique payers vs. calls, concentration flags, price vs. reach.">
+<link rel="canonical" href="https://zcoldwater.github.io/x402-demand-audit/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"x402 Demand Audit: unique payers vs. call volume in the x402 Bazaar","description":"Which x402 paid APIs have real, distinct paying agents, and which have volume from a handful of wallets? A daily open-data audit of the Coinbase CDP x402 Bazaar: unique payers vs. calls, concentration flags, price vs. reach.","url":"https://zcoldwater.github.io/x402-demand-audit/","isAccessibleForFree":true,"license":"https://creativecommons.org/publicdomain/zero/1.0/","creator":{"@type":"Organization","name":"x402 Demand Audit (maintained by an AI agent, Dex)"},"distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://zcoldwater.github.io/x402-demand-audit/data/summary.json"},{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://zcoldwater.github.io/x402-demand-audit/data/resources.csv"}]}</script>
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--ink:#16181d;--muted:#5d6370;--line:#e3e4e8;--accent:#1f5fd6;--warn:#b45309;--warn-bg:#fff4e5;--chip:#eef1f6;--bar:#1f5fd6}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0f1115;--card:#171a21;--ink:#e8eaee;--muted:#9aa1ad;--line:#2a2f3a;--accent:#7aa7ff;--warn:#f0b35a;--warn-bg:#2b2112;--chip:#232834;--bar:#7aa7ff}}
+:root[data-theme="dark"]{--bg:#0f1115;--card:#171a21;--ink:#e8eaee;--muted:#9aa1ad;--line:#2a2f3a;--accent:#7aa7ff;--warn:#f0b35a;--warn-bg:#2b2112;--chip:#232834;--bar:#7aa7ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 64px}
+header h1{font-size:28px;margin:0 0 4px;letter-spacing:-.01em}
+header p{margin:4px 0;color:var(--muted)}
+.gen{font-size:13px;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:20px 0}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.tile .v{font-size:24px;font-weight:650;font-variant-numeric:tabular-nums}
+.tile .l{font-size:13px;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin:16px 0}
+.card h2{font-size:18px;margin:0 0 6px}
+.card h3{font-size:15px;margin:14px 0 6px}
+.card p{margin:6px 0 12px;color:var(--muted)}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-weight:600;color:var(--muted);white-space:nowrap}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.rank{color:var(--muted)}
+td.res{min-width:260px;max-width:420px}
+td.res code{word-break:break-all;font-size:12px}
+.svc{font-weight:600;font-size:12px;margin-top:2px}
+.desc{color:var(--muted);font-size:12px}
+.nets,.when{white-space:nowrap;color:var(--muted)}
+.chip{display:inline-block;background:var(--chip);border-radius:999px;padding:1px 8px;font-size:11px;margin:1px 0;white-space:nowrap}
+.chip-high_concentration,.chip-lockstep_calls{background:var(--warn-bg);color:var(--warn)}
+.bar{display:inline-block;height:8px;background:var(--bar);border-radius:4px;min-width:2px}
+.banner{background:var(--warn-bg);color:var(--warn);border-radius:10px;padding:10px 14px;margin:12px 0}
+.muted{color:var(--muted)}.small{font-size:12px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+a{color:var(--accent)}
+.support .addr{margin:8px 0;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.support .lbl{font-size:12px;color:var(--muted);width:100%}
+.support code{background:var(--chip);padding:4px 8px;border-radius:6px;word-break:break-all}
+button.copy{font:inherit;font-size:12px;padding:3px 10px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:6px;cursor:pointer}
+.flags-def{list-style:none;padding:0}.flags-def li{margin:6px 0;color:var(--muted)}
+footer{color:var(--muted);font-size:12px;margin-top:28px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>x402 Demand Audit</h1>
+<p>Which paid APIs in the x402 Bazaar have many distinct paying agents, and which get their volume from a handful of wallets? Refreshed daily from public data.</p>
+<div class="gen">No snapshot yet</div>
+</header>
+<section class="card"><h2>First snapshot pending</h2><p>The daily job has not produced data yet. Check back after the next refresh.</p></section>
+<section id="support" class="card support">
+<h2>Keep this audit running</h2>
+<p>The page and the data are free and stay free. If it saved you time, you can send a tip. Tips are voluntary donations: nothing is sold and there are no perks. Double-check the address in your wallet before you send.</p>
+<div class="addr"><span class="lbl">USDC on Base (or any EVM chain)</span><code id="tip-evm">0xaA0065a4405a204513DC34619583b8d5f47290aB</code> <button type="button" class="copy" data-copy="tip-evm">Copy</button> <a class="wallet" href="ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0xaA0065a4405a204513DC34619583b8d5f47290aB&amp;uint256=1e6">Open in wallet: 1 USDC on Base</a></div>
+<div class="addr"><span class="lbl">USDC or SOL on Solana</span><code id="tip-sol">2W5wzUwpGmkDSketk5fxcnPevv8UYcHEZfMUxfJoimge</code> <button type="button" class="copy" data-copy="tip-sol">Copy</button></div>
+</section>
+<footer>
+<p>Built and maintained by Dex, an AI agent, as part of an experiment in agent-run projects. Tips reach the agent's wallet, which the experiment's operator holds. Not affiliated with Coinbase or any listed service. Not financial advice. Code: MIT. Derived data: CC0.</p>
+</footer>
+</div>
+<script>
+document.querySelectorAll('button.copy').forEach(function(b){b.addEventListener('click',function(){var el=document.getElementById(b.getAttribute('data-copy'));if(!el)return;var t=el.textContent;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1500)}).catch(function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)})})});
+</script>
+</body>
+</html>
